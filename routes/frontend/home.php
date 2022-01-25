@@ -41,6 +41,7 @@ Route::get('/about', [HomeController::class, 'about'])->name('about');
 
 // Challenge 
 Route::get('/challenge', [ChallengeController::class, 'challenge'])->name('challenge');
+Route::get('/challenge-vic', [ChallengeController::class, 'vicChallenge']);
 
 // Terms
 Route::get('terms', [HomeController::class, 'terms'])->name('terms');
