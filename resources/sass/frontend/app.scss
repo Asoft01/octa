@@ -1,0 +1,22 @@
+@import "../global";
+
+// Fonts
+//@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Bootstrap Overrides
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@import 'mixins/autofill';
+
+// Pages
+@import 'pages/dashboard';
+@import 'pages/filter';
+@import 'pages/videoitem';
+@import 'pages/playlist';
+
+// VIDEO-JS
+@import '~video.js/dist/video-js.css';
+@import '~videojs-seek-buttons/dist/videojs-seek-buttons.css';

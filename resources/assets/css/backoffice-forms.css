@@ -1,0 +1,64 @@
+.main .dropzone,
+.main .form-control,
+.main .note-editor.note-frame,
+.main .select2-container--default .select2-selection--single {
+	border-color: var(--secondary);
+}
+.main .form-control,
+.main .note-editor.note-frame,
+.main .select2-container--default {
+	margin-bottom: 0.5rem;
+}
+.main .dropzone {
+	border-radius: 0.25rem;
+	margin-bottom: 0.5rem;
+}
+.main .form-control {
+	color: #23282c;
+}
+.main .select2-container--default .select2-selection--single {
+	height: 35px;
+}
+.main .select2-container--default .select2-selection--single .select2-selection__rendered {
+	color: #23282c;
+	line-height: 34px;
+	padding-left: 0.75rem;
+}
+.main .select2-container--default .select2-selection--single .select2-selection__clear {
+	color: #888;
+	height: 34px;
+}
+.main .select2-container--default .select2-selection--single .select2-selection__arrow {
+	height: 33px;
+}
+.main .form-control-label small {
+	display: block;
+	font-size: 12px;
+	font-style: italic;
+}
+.main .note-editable * {
+	line-height: inherit !important;
+	font-size: 1em !important;
+}
+.main .select2-container--default {
+	width: 100% !important;
+}
+.main select option[value=""] {
+	color: var(--gray);
+}
+.main table.table,
+.main table.table > tbody > tr > td .form-group.row {
+	margin-bottom: 0;
+}
+.main table.table > tbody > tr:last-child > td {
+	padding-bottom: 0;
+}
+
+.main select[required].select2-hidden-accessible {
+	margin-top: 28px;
+	margin-left: 9em;
+}
+main .dataTables_processing {
+	background-color: #fff !important;
+	z-index: 1000;
+}

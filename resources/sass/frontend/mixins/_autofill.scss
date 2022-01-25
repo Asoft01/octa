@@ -1,0 +1,42 @@
+@mixin autofill-base-styling($background: $input-bg, $color: $input-color) {
+	$background-box-shadow: 0 0 0px 1000px $background inset;
+	&:-webkit-autofill {
+		&, &:hover, &:focus, &:active {
+			filter: none;
+			caret-color: $color;
+			-webkit-text-fill-color: $color;
+			-webkit-box-shadow: $background-box-shadow;
+		}
+	}
+}
+
+@mixin autofill-focus-styling($background: $input-bg, $color: $input-color, $focus-box-shadow: $input-focus-box-shadow) {
+	$background-box-shadow: 0 0 0px 1000px $background inset;
+	&:-webkit-autofill {
+		&:focus {
+			caret-color: $color;
+			-webkit-text-fill-color: $color;
+			@if $focus-box-shadow {
+				-webkit-box-shadow: $background-box-shadow, $focus-box-shadow;
+			}
+			@else {
+				-webkit-box-shadow: $background-box-shadow;
+			}
+		}
+	}
+}
+
+@mixin autofill-font-styling($font-size: $input-font-size, $font-family: $input-font-family) {
+	&:-webkit-autofill {
+		&::first-line {
+			font-family: if($font-family, $font-family, $font-family-base);
+			font-size: $font-size;
+		}
+	}
+}
+
+@mixin autofill-transition() {
+	&:-webkit-autofill {
+		transition: background-color 5000s ease-in-out 0s;
+	}
+}
